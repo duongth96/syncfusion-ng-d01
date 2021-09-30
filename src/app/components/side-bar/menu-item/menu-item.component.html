@@ -1,0 +1,10 @@
+<a routerLink="data!.route" class="menu-item" (click)="onItemSelected()">
+    <span style="flex-grow: 1;">{{data!.label}}</span>
+    <span *ngIf="hasChild">
+        <i *ngIf="expanded">-</i>
+        <i *ngIf="!expanded">+</i>
+    </span>
+</a>
+<div class="sub-nav" *ngIf="expanded">
+    <app-menu-item *ngFor="let child of data!.children" [data]="child"></app-menu-item>
+</div>

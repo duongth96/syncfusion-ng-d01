@@ -1,0 +1,6 @@
+<h2>LOGO</h2>
+<button>Trang chủ</button>
+<div class="group" *ngFor="let group of groups">
+    <h5>{{group.name}}</h5>
+    <app-menu-item *ngFor="let item of group.menu" [data]="item"></app-menu-item>
+</div>
