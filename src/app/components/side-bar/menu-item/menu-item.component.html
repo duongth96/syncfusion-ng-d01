@@ -1,4 +1,4 @@
-<a routerLink="data!.route" class="menu-item" (click)="onItemSelected()">
+<a [routerLink]="data!.route" class="menu-item" (click)="onItemSelected()">
     <span style="flex-grow: 1;">{{data!.label}}</span>
     <span *ngIf="hasChild">
         <i *ngIf="expanded">-</i>

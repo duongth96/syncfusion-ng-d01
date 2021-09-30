@@ -23,8 +23,6 @@ export class MenuItemComponent implements OnInit {
   expanded= false
 
   ngOnInit(): void {
-    console.log(this.data);
-    
     if(this.data?.children && this.data?.children.length > 0)
       this.hasChild = true;
   }

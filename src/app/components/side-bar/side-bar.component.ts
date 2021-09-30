@@ -29,7 +29,6 @@ export class SideBarComponent implements OnInit {
   groups:Array<GroupMenu>|undefined;
 
   ngOnInit(): void {
-    console.log(this.groups);
     
 
   }
