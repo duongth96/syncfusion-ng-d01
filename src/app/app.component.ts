@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'syncfusion-ng-d01';
+
+  @ViewChild('SideBarComponent') sidebar?: SideBarComponent;
+
+  toggleClick=()=>{
+    this.sidebar!.toggleClick();
+  }
 }

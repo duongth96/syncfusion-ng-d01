@@ -1,3 +1,8 @@
-<div style="width: 200px;">
-  <app-side-bar></app-side-bar>
+<app-side-bar></app-side-bar>
+<div>
+  <div class="title">Main content</div>
+  <div class="sub-title"> Click the button to open/close the Sidebar.</div>
+  <div style="padding:20px" class="center-align">
+      <button ejs-button id="toggle" class="e-btn e-info" (click)="toggleClick()">Toggle Sidebar</button>
+  </div>
 </div>

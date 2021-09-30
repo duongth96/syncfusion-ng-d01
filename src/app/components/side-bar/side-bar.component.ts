@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem, GroupMenu } from './types';
+import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 
 @Component({
   selector: 'app-side-bar',
@@ -31,6 +32,23 @@ export class SideBarComponent implements OnInit {
   ngOnInit(): void {
     
 
+  }
+
+
+  @ViewChild('sidebar') sidebar?: SidebarComponent;
+  public showBackdrop: boolean = true;
+  public type: string = 'Push';
+  public width: string ='280px';
+  public closeOnDocumentClick: boolean = true;
+  public onCreated(args: any) {
+      this.sidebar!.element.style.visibility = '';
+  }
+  closeClick(): void {
+      this.sidebar!.hide();
+  };
+
+  toggleClick():void{
+    this.sidebar!.show();
   }
 
 }
